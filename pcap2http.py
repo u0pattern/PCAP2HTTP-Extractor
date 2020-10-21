@@ -1,6 +1,6 @@
 from scapy.all import *
 import re,argparse,sys,os
-parser = argparse.ArgumentParser(description="[+] WAFxCMS Spider [+]")
+parser = argparse.ArgumentParser(description="[+] PCAP2HTTP Extractor [+]")
 parser.add_argument('-p', required=True, default=None, help='Add the PCAP file')
 parser.add_argument('-m', required=True, default=None, help='Add the HTTP method [ex: POST|GET|PUT|etc..]')
 args = vars(parser.parse_args())
