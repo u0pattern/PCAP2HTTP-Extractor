@@ -10,9 +10,8 @@ if os.path.isfile(args['p']):
 	for session in sessions:
 		for packet in sessions[session]:
 			if packet.haslayer(TCP):
-				if packet[TCP].dport == 80 or packet[TCP].dport == 443:
-					payload = bytes(packet[TCP].payload)
-					if args['m'] in payload: # you can change the http method if you want
-						print("http[s]://"+payload.split('Host: ')[1].split("\r\n")[0]+payload.split(args['m']+' ')[1].split(' HTTP/1.1')[0])
+				payload = bytes(packet[TCP].payload)
+				if args['m'].upper() in payload: # you can change the http method if you want
+					print(payload)
 else:
 	print("[-] PCAP File Not found [-]")
