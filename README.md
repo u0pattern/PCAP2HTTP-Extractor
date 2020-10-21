@@ -1,5 +1,5 @@
 # PCAP2HTTP-Extractor
-PCAP2HTTP Extractor is a tool that helps to dump all HTTP[s] links from PCAP file
+PCAP2HTTP Extractor is a tool that helps to dump all HTTP[s] packets from PCAP file
 
 # Requirements
 install scapy: 
